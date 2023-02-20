@@ -1,0 +1,11 @@
+[Unit]
+Description=OTDOrders
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/OTD-RGB-Matrix/otdtext.py --led-rows=64 --led-cols=64 --led-gpio-mapping=regular --led-multiplexing=0 --led-brightness=50
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
