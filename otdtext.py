@@ -51,10 +51,12 @@ try:
         side = order['side']
 
         # Calculate where percent is on the screen
-        if float(percent) <= -10 or float(percent) >= 10:
-          rl = 45
-        elif float(percent) >= 100:
+        if len(str(percent)) == 6:
+          rl = 41
+        elif len(str(percent)) == 7:
           rl = 35
+        elif len(str(percent)) == 1 or len(str(percent)) == 2:
+          rl = 57
         else:
           rl = 45
 
