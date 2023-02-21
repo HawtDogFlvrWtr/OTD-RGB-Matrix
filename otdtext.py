@@ -51,14 +51,8 @@ try:
         side = order['side']
 
         # Calculate where percent is on the screen
-        if len(str(percent)) == 6:
-          rl = 41
-        elif len(str(percent)) == 7:
-          rl = 35
-        elif len(str(percent)) == 1 or len(str(percent)) == 2:
-          rl = 57
-        else:
-          rl = 45
+        percent_len = len(str(percent).replace('-','')) + 1 # Remove negative and add 1 for % sign
+        rl = 64 - (percent_len * 4) # multiply character count * 4 (pixels per char) and subtract by total width of 64 pixels
 
         # Symbol
         graphics.DrawText(canvas_off, font, 0, line, gray, symbol)
