@@ -23,8 +23,7 @@ red = graphics.Color(241, 65, 108)
 green = graphics.Color(80, 205, 137)
 blue = graphics.Color(0, 163, 255)
 font = graphics.Font()
-cwd = os.getcwd()
-font.LoadFont("%s/4x6.bdf" % cwd)
+font.LoadFont("/opt/OTD-RGB-Matrix/4x6.bdf")
 try:
   with open('/boot/api_key.txt') as api_file:
     lines = api_file.readlines()
