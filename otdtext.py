@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import time
 import sys
+import os
 import requests
 from rgbmatrix import graphics, RGBMatrix, RGBMatrixOptions
 from PIL import Image
@@ -22,7 +23,8 @@ red = graphics.Color(241, 65, 108)
 green = graphics.Color(80, 205, 137)
 blue = graphics.Color(0, 163, 255)
 font = graphics.Font()
-font.LoadFont("/opt/4x6.bdf")
+cwd = os.getcwd()
+font.LoadFont("%s/4x6.bdf" % cwd)
 try:
   with open('/boot/api_key.txt') as api_file:
     lines = api_file.readlines()
