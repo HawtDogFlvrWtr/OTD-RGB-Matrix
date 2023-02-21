@@ -3,6 +3,7 @@ Description=OTDOrders
 After=network.target
 
 [Service]
+WorkingDirectory=/opt/OTD-RGB-Matrix
 ExecStart=/usr/bin/python3 /opt/OTD-RGB-Matrix/otdtext.py
 Restart=always
 User=root
