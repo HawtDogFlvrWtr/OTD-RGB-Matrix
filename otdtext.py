@@ -62,9 +62,11 @@ try:
           if float(percent) == -80085:
             if side == 'sell':
               text = 'Sell'
+              rl = 48;
               text_color = blue
             else:
               text = 'Buy'
+              rl = 49;
               text_color = green
             graphics.DrawText(canvas_off, font, rl, line, text_color, text)
           else:
